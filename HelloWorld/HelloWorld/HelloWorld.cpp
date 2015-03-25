@@ -131,7 +131,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	HelloWorldLib helloWorldLib;
 	wstring helloText = helloWorldLib.GetHelloWorldText();
 
-	int wmId , wmEvent;
+	int wmId;//, wmEvent;
 	PAINTSTRUCT ps;
 	HDC hdc;
 

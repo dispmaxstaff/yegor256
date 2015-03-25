@@ -4,6 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{A1E0F95E-2A59-4C54-B70C-A60869EDF95D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9EA6771-023D-4A45-A2CB-8A35C15C64DD} = {D9EA6771-023D-4A45-A2CB-8A35C15C64DD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorldLib", "HelloWorldLib\HelloWorldLib.vcxproj", "{D9EA6771-023D-4A45-A2CB-8A35C15C64DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorldTests", "HelloWorldTests\HelloWorldTests.vcxproj", "{139F05EE-22A3-4B97-AF62-990159AF828F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9EA6771-023D-4A45-A2CB-8A35C15C64DD} = {D9EA6771-023D-4A45-A2CB-8A35C15C64DD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,14 @@ Global
 		{A1E0F95E-2A59-4C54-B70C-A60869EDF95D}.Debug|Win32.Build.0 = Debug|Win32
 		{A1E0F95E-2A59-4C54-B70C-A60869EDF95D}.Release|Win32.ActiveCfg = Release|Win32
 		{A1E0F95E-2A59-4C54-B70C-A60869EDF95D}.Release|Win32.Build.0 = Release|Win32
+		{D9EA6771-023D-4A45-A2CB-8A35C15C64DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D9EA6771-023D-4A45-A2CB-8A35C15C64DD}.Debug|Win32.Build.0 = Debug|Win32
+		{D9EA6771-023D-4A45-A2CB-8A35C15C64DD}.Release|Win32.ActiveCfg = Release|Win32
+		{D9EA6771-023D-4A45-A2CB-8A35C15C64DD}.Release|Win32.Build.0 = Release|Win32
+		{139F05EE-22A3-4B97-AF62-990159AF828F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{139F05EE-22A3-4B97-AF62-990159AF828F}.Debug|Win32.Build.0 = Debug|Win32
+		{139F05EE-22A3-4B97-AF62-990159AF828F}.Release|Win32.ActiveCfg = Release|Win32
+		{139F05EE-22A3-4B97-AF62-990159AF828F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

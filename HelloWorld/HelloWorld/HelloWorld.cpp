@@ -3,6 +3,9 @@
 
 #include "stdafx.h"
 #include "HelloWorld.h"
+#include "HelloWorldLib.h"
+
+using namespace std;
 
 #define MAX_LOADSTRING 100
 
@@ -125,7 +128,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	LPCWSTR hello = L"Hello world!";
+	HelloWorldLib helloWorldLib;
+	wstring helloText = helloWorldLib.GetHelloWorldText();
 
 	int wmId, wmEvent;
 	PAINTSTRUCT ps;
@@ -154,7 +158,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		RECT r;
 		r.top = r.left = 8;
 		r.right = r.bottom = 100;
-		DrawText(hdc, hello, lstrlenW(hello), &r, 0);
+		DrawText(hdc, helloText.c_str(), helloText.length(), &r, 0);
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:

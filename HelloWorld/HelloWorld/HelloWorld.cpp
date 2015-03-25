@@ -131,7 +131,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	HelloWorldLib helloWorldLib;
 	wstring helloText = helloWorldLib.GetHelloWorldText();
 
-	int wmId, wmEvent;
+	int wmId , wmEvent;
 	PAINTSTRUCT ps;
 	HDC hdc;
 
@@ -139,7 +139,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
-		wmEvent = HIWORD(wParam);
+		//wmEvent = HIWORD(wParam);
 		// Parse the menu selections:
 		switch (wmId)
 		{
